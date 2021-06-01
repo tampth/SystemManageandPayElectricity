@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NotificationController">
+   <children>
+      <AnchorPane layoutX="176.0" prefHeight="730.0" prefWidth="908.0" stylesheets="@Style.css">
+         <children>
+            <Pane layoutY="61.0" prefHeight="7.0" prefWidth="608.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <TableView fx:id="notiTable" layoutX="13.0" layoutY="140.0" prefHeight="586.0" prefWidth="878.0" style="-fx-alignment: center;" stylesheets="@Style.css">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="56.0" style="-fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="DCreateCol" prefWidth="144.53335571289062" style="-fx-alignment: center;" text="Date Created" />
+                  <TableColumn fx:id="DSentCol" prefWidth="144.53329467773438" style="-fx-alignment: center;" text="Date Sent" />
+                  <TableColumn fx:id="EditByCol" prefWidth="150.66650390625" style="-fx-alignment: center;" text="Edit By" />
+                  <TableColumn fx:id="DetailCol" prefWidth="384.533447265625" style="-fx-alignment: center;" text="Detail" />
+              </columns>
+            </TableView>
+            <Text layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification">
+               <font>
+                  <Font name="Bauhaus 93" size="33.0" />
+               </font>
+            </Text>
+            <HBox layoutX="836.0" layoutY="73.0" prefHeight="46.0" prefWidth="47.0" spacing="20.0">
+               <children>
+                  <FontAwesomeIconView fx:id="btnAdd" fill="#2196f3" glyphName="PLUS" lineSpacing="40.0" onMouseClicked="#btnAdd" size="40" styleClass="btn" tabSize="0" wrappingWidth="43.69999027252197" />
+               </children></HBox>
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="752.0" prefWidth="174.0" style="-fx-background-color: #FFC107;" />
+   </children>
+</AnchorPane>
